@@ -11,8 +11,10 @@ $response_data = json_decode($json_data);
 // all data exists in 'people' object
 $people_data = $response_data->people;
 
+echo '<script>var peopleArray = '.json_encode($people_data).';</script>';
+
 // Print data to visualize for debugging
-print_r($people_data);
+// print_r($people_data);
 
 // // iterate through the array and display people data
 // foreach ($people_data as $person) {

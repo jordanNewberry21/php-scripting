@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="scripts/styles/style.css" />
 </head>
 <body>
+    <?php file_get_contents('../public/scripts/get-api-data.php'); ?>
     <header>
         <h1>
             Crystal-D Employee Information List
@@ -29,10 +30,12 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>for</td>
-                        <td>loop</td>
-                        <td>goes</td>
-                        <td>here</td>
+                        <?php foreach ($peopleArray as $employee) { ?>
+                            <td><?php echo $employee->name ?></td>
+                            <td><?php echo $employee->height ?></td>
+                            <td><?php echo $employee->dob ?></td>
+                            <td><?php echo $employee->hobby ?></td>
+                            <?php } ?>
                     </tr>
                 </tbody>
             </table>
