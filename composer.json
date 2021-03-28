@@ -10,6 +10,7 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.0",
-        "moment/moment": "^2.29"
+        "moment/moment": "^2.29",
+        "fightbulc/moment": "^1.33"
     }
 }
