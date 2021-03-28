@@ -1,0 +1,12 @@
+{
+    "name": "jordannewberry/php-scripts",
+    "description": "Code Test for Crystal-D. Attempting to get data from an API endpoint, creating a list with PHP that will then be displayed using JavaScript.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jordan Newberry",
+            "email": "jordan.newberry@gmail.com"
+        }
+    ],
+    "require": {}
+}

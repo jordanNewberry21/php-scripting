@@ -5,26 +5,15 @@ $api_url = 'https://api.crystal-d.com/codetest';
 // read JSON data
 $json_data = file_get_contents($api_url);
 
-// decode data into PHP array
+// encode data into JS-friendly array
 $response_data = json_decode($json_data);
 
 // all data exists in 'people' object
 $people_data = $response_data->people;
 
-echo '<script>var peopleArray = '.json_encode($people_data).';</script>';
+$js_array = json_encode($people_data);
 
-// Print data to visualize for debugging
-// print_r($people_data);
+echo $js_array;
 
-// // iterate through the array and display people data
-// foreach ($people_data as $person) {
-//     echo "Name: ".$person->name;
-//     echo "<br/>";
-//     echo "Height: ".$person->height;
-//     echo "<br/>";
-//     echo "D.O.B.: ".$person->dob;
-//     echo "<br/>";
-//     echo "Hobby: ".$person->hobby;
-//     echo "<br/>";
-// }
+
 ?>

@@ -7,6 +7,9 @@
     <title>PHP Code Test</title>
     <script src="vendors/jQuery.js"></script>
     <script src="scripts/client.js"></script>
+    <script type="text/javascript">
+        phpVars = <?php echo json_encode($people_data); ?>
+    </script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="scripts/styles/style.css" />
 </head>
@@ -29,13 +32,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <?php foreach ($peopleArray as $employee) { ?>
-                            <td><?php echo $employee->name ?></td>
-                            <td><?php echo $employee->height ?></td>
-                            <td><?php echo $employee->dob ?></td>
-                            <td><?php echo $employee->hobby ?></td>
-                            <?php } ?>
+                    <tr id="employee-table">
+                        
                     </tr>
                 </tbody>
             </table>
