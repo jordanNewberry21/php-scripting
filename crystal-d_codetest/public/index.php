@@ -7,14 +7,10 @@
     <title>PHP Code Test</title>
     <script src="vendors/jQuery.js"></script>
     <script src="scripts/client.js"></script>
-    <script type="text/javascript">
-        phpVars = <?php echo json_encode($people_data); ?>
-    </script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="scripts/styles/style.css" />
 </head>
 <body>
-    <?php file_get_contents('../public/scripts/get-api-data.php'); ?>
     <header>
         <h1>
             Crystal-D Employee Information List
@@ -25,15 +21,15 @@
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Height</th>
-                        <th scope="col">Date of Birth</th>
-                        <th scope="col">Hobby</th>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Date of Birth</th>
+                        <th>Hobby</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr id="employee-table">
-                        
+                <tbody id="employee-table">
+                    <tr>
+                        <!-- jQuery will fill this in -->
                     </tr>
                 </tbody>
             </table>

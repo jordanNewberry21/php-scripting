@@ -8,5 +8,8 @@
             "email": "jordan.newberry@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "moment/moment": "^2.29"
+    }
 }

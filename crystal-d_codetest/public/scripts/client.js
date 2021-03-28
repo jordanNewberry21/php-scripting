@@ -5,14 +5,14 @@ function readyNow () {
 }
 
 function getApiData () {
-    let myVar = {};
     $.ajax({
         method: 'GET',
         url: 'http://localhost:8888/php-scripts/get-api-data.php'
     }).then( (response) => {
         console.log(response)
-        myVar = response;
-        renderData(myVar);
+        let myObject = JSON.parse(response)
+        console.log('My Object is.................... ---->', myObject);
+        renderData(myObject);
     }).catch((error) => {
         console.log('Error!!', error);
         alert('Something went wrong.');
@@ -21,7 +21,23 @@ function getApiData () {
 
 function renderData (array) {
     console.log(array);
-    for (let i = 1; i < array.length - 1; i++) {
-        console.log(array[i]);
+    $('#employee-table').empty()
+    for (let i = 0; i < array.length; i++) {
+        $('#employee-table').append(`
+            <tr>
+                <td>
+                    ${array[i].name}
+                </td>
+                <td>
+                    ${array[i].height}
+                </td>
+                <td>
+                    ${array[i].dob}
+                </td>
+                <td>
+                    ${array[i].hobby}
+                </td>
+            </tr>
+        `)
     }
 }
