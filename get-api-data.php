@@ -1,8 +1,5 @@
 <?php
 
-// guzzle client
-// $client = new GuzzleHttp\Client();
-
 // API endpoint with the data
 $api_url = 'https://api.crystal-d.com/codetest';
 
