@@ -22,7 +22,7 @@ function readyNow () {
 function getApiData () {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:8888/php-scripts/get-api-data.php'
+        url: 'scripts/get-api-data.php'
     }).then( (response) => {
         console.log(response)
         let myObject = JSON.parse(response)
